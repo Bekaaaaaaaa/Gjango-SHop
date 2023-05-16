@@ -30,7 +30,7 @@ class UserManager(BaseUserManager):
         user = self.model(email=email, phone=phone, **kwargs)
         # self.model = User
         user.set_password(password)  # хеширование пароля
-        user.save(using=self._db)  # созраняем юзера в бд
+        user.save(using=self._db)  # сохраняем юзера в бд
         return user
 
 
